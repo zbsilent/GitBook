@@ -1,9 +1,12 @@
-# webpack学习
+# WebPack
 
+_webpack for node_
 
-### 核心文件 
-[核心配置文件](webpack.config.js)
+### webpack.config.js
 
+* [核心配置文件](webpack.config.js)
+
+---
 ```json
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -45,3 +48,29 @@ module.exports = {
 };
 
 ```
+---
+### eslint
+
+::: tip
+nmp i eslint-loader eslint eslint-config-airbnb-base eslint-plugin-import -D
+
+这里需要设置 package.json
+
+```json
+"eslintConfig":{
+"extends":"airbnb-base"
+} 
+```
+:::
+---
+### devServer
+
+::: tip
+ * <font color="green">npm i webpack-dev-server -D</font>
+ * npx webpack server --mode development --open
+:::
+
+---
+### HMR(模块热替换)
+
+devServer配置增加 `hot:true` 配置

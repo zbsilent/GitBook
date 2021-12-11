@@ -16,6 +16,14 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/, //表示node_modules中的tsx文件不做处理
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          fix: true, //自动修复
+        },
+      },
     ],
   },
   //输出
@@ -28,16 +36,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       filename: "index.html",
-      chunks:['app'], //把哪几个命名的引入到html
+      chunks: ["app"], //把哪几个命名的引入到html
       minify: {
         collapseWhitespace: true, //压缩去除空格
-        removeComments:true
+        removeComments: true,
       },
     }),
   ],
+  //需要这个配置才能自动刷新
+  target: "web",
+  //devServer配置
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    compress: true,
+    port: 9000,
+    open: true, //自动打开浏览器
+  },
 };
-
-
-// <<< @/../@vuepress/markdown/__tests__/fragments/snippet.js{2}
-<<< @/../@vuepress/markdown/__tests__/fragments/snippet-with-region.js#snippet{1}
- 

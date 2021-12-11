@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button style="color: lime;">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <script type="text/javascript">
+        //1.可以重复声明 2.无法限制修改 3.没有块级作用于
+        {
+            var a = 1;
+            var a = 2;
+            a = 30;
+        }
+        var name = 'lll';
+        if (true) {
+            var name = 'eduwork'
+            console.log(name)
+        }
+
+        console.log(a)
+
+        function myfun() {
+            var tt = "monkey"
+        }
+
+
+        var btns = document.getElementsByTagName('button');
+
+        console.log(`得到结果是${btns.length}`, btns)
+        console.log(`testvalue: ${Math.random()}`)
+
+        for (var i = 0; i < btns.length; i++) {
+            (function (i) {
+                btns[i].addEventListener('click', function () {
+                    console.log(i)
+                })
+            })(i)
+            //这样i最后都被修改成了5
+        }
+
+
+
+
+        const funt = (x) => console.log(x * 2)
+        funt(4)
+
+        let arr = [1, 3, 99, 4, 77, 5]
+        const ttt = arr.sort(function (a, b) {
+            return a - b;
+        })
+        console.log(ttt)
+
+
+        const obj = {
+            fun: function () {
+                console.log(this)
+            }
+        }
+        obj.fun()
+        const url = {
+            fun: () => console.log(this)
+
+        }
+        url.fun()
+
+    </script>
+</body>
+<style>
+    #box {
+        width: 100px;
+        height: 50px;
+        background: red;
+    }
+
+    #box.bgcolor {
+        background: yellow;
+    }
+</style>
+<div id="box"></div>
+<script>
+    console.log("=====")
+    const box = document.getElementById('box');
+
+    // box.onclick = function () {
+
+    //     const obj = this; //这里将this指向obj
+
+    //     //setTimeOut是window定义的对象 function函数是由setTimeOut去调用的
+    //     setTimeout(function () {
+    //         //console.log(this);
+    //         obj.className = 'bgcolor'
+    //     }, 3000)
+
+    // }
+
+    box.onclick = function () {
+        //定义时所处的对象的上一级 this
+        setTimeout(() => {
+            console.log(this);
+            this.className = 'bgcolor';
+        }, 3)
+    }
+</script>
+<script>
+    const map = [30, 50, 80, 43, 21];
+
+    const arry = map.filter(value => value > 40).map(v => v * 0.5).reduce((previousValue, currentValue) => {
+        //第一次回调函数的返回值，
+        console.log(`第一元素:${previousValue}`, `第二元素:${currentValue}`)
+        return previousValue + currentValue;
+    })
+    //链式编程
+    const newArray = map.filter(value => value > 40).map(v => v * 0.5).reduce((previousValue, currentValue) => previousValue + currentValue)
+
+    console.log(arry, newArray)
+</script>
+
+<script>
+    console.log(`====map=====`)
+
+    const mp = new Map();
+    console.log(Object.getPrototypeOf(mp))
+    console.log(mp.__proto__)
+</script>
+<script>
+    let abc = {
+        name: 'li', age: 10, sex: 'nv', tt: {
+            car: ['bc', 'bm'],
+            w: 'a'
+        }
+    }
+    console.log(abc)
+    let { name, age, sex, tt } = abc;
+    console.log(tt)
+    const { car, w } = tt;
+    console.log(name)
+    console.log(car)
+</script>
+
+
+<script>
+    console.log(`...`)
+    let arrs = [1, 2, 3]
+    //这里相当于把arrs展开后填入对应位置 扩展运算符
+    let arra = [19, 20]
+    let arrs1 = [...arrs, 7, 8, 9, ...arra]
+    console.log(`...${arrs1}`)
+
+    //这里可变参数
+    function show(a, b, ...array) {
+        console.log(`前两个参数${a},${b}`);
+        array.forEach((arr, index) => {
+            console.log(`参数变为数组开始循环${index}次，值是${arr}`);
+        })
+
+    }
+    let unit = [4, 5]
+    let uarray = [3, 5, 7, 9]
+    //做参数用
+    show(...unit, ...uarray)
+</script>
+
+<script>
+    //类
+    class Person {
+        //构造方法
+        constructor(name, sex) {
+            this.name = name;
+            this.sex = sex;
+        }
+        toString() {
+            return `${this.name}-${this.sex}`
+        }
+    }
+    //支持继承
+    class Student extends Person {
+        constructor(name, sex, age) {
+            super(name, sex);
+            this.age = age;
+        }
+    }
+    const stu = new Student('张三', '男', 18);
+    const per = new Person('李强', '男');
+
+    console.log(x, y)
+    console.log(stu.toString())
+    //对象 变量和值一样可以省略
+    let x = "x坐标";
+    let y = "y坐标"
+    let jsonObj = { x, y }
+    //字符串 串行化字符串
+    console.log(JSON.stringify(jsonObj))
+    //反串形化
+    console.log(JSON.parse(JSON.stringify(jsonObj)).x)
+</script>
+
+<script src="xxx.js" type="module">
+
+</script>
+
+</html>
