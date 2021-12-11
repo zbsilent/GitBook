@@ -188,12 +188,5 @@ dist
 .vscode/*
 build/
 build
-node_modules/@vuepress/core/.temp/internal/page-components.js
-node_modules/@vuepress/core/.temp/internal/routes.js
-node_modules/@vuepress/core/.temp/internal/siteData.js
-node_modules/@vuepress/core/.temp/internal/page-components.js
-node_modules/@vuepress/core/.temp/internal/routes.js
-node_modules/@vuepress/core/.temp/internal/siteData.js
-node_modules/@vuepress/core/.temp/internal/page-components.js
-node_modules/@vuepress/core/.temp/internal/routes.js
-node_modules/@vuepress/core/.temp/internal/siteData.js
+node_modules/*
+ 
