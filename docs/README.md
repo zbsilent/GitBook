@@ -1,7 +1,6 @@
 ---   
 home: true
 heroImage: 
-# main-title: "TypeScript 入门" 
 description: "L`amant" 
 actionText: 快速上手 →
 actionLink: /front-end-development/
