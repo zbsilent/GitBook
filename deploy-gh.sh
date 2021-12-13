@@ -13,6 +13,8 @@ cd build
 # echo 'www.example.com' > CNAME
 
 git init
+# git rm -r --cached .   
+# git add .      
 git add -A
 git commit -m 'deploy'
 
