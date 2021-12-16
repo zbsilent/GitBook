@@ -326,9 +326,27 @@ _Refenece:_ Vue 实现了一套内容分发的 API,将 `<slot> `元素作为承�
 ### 路由
 
 ```html
-<router-link to="/">Home</router-link>  //路由连接
+<!--标签高亮-->
+<router-link class="bg" active-class="active" to="/">Home</router-link>  //路由连接
 <router-link to="/about">About</router-link>
-<router-view/> //站位符
+
+ <!-- 具名插槽方式把链接修改掉 其他属性不变-->
+<router-link to="/about" custom v-slot="{navigate}">
+  <button @click="navigate" @keypress.enter="navigate" role="link">测试</button>
+</router-link>
+<!-- 全局变量操作 -->
+<button @click="$router.go(-1)">返回</button>
+<button @click="$router.push('/')">主页</button>
+
+<!-- 获取路由地址 -->
+{{$route.path}}
+<!-- 站位符 -->
+<router-view/> 
+<!--对位使用-->
+<router-view class='one' name='User'><router-view> 
+<router-view class='two'><router-view> 
+<router-view class='three' name='About'></router-view>
+
 ```
 
 #### 路由配置文件
@@ -343,6 +361,11 @@ import Home from '../views/Home.vue'
 const routers = [
     {path:'/', name:'Home', component:Home},
     {path:'/about', name:'About', component:About /*,component: () => import('../views/About.vue')*/},
+    {path:'/',name:'Home',components:{
+        default:Home,
+        About,
+        User
+    }}
 ]
 
 const router = createRouter({
@@ -369,4 +392,62 @@ createApp(App).use(router).mount('#app')
 
 ::: danger 注意
 代码分离级别路由，如果不是用箭头函数导入，都将一次封装都js里 ，所以使用 `component: () => import('../views/About.vue')`导入
+
+Hash模式带# 指导浏览器动作的  
+历史模式 HTML HistoryAPI和服务器配置
+:::
+
+#### 子路由模式 
+
+* 修改路由配置文件
+
+ 
+:::details 详细配置 
+```js{5}
+ {
+    path: "/about",
+    name: "About",
+    component: () =>  import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    children: [
+      {
+        path: "/detial",
+        name: "Detial",
+        component: () => import("../views/Detial.vue"),
+      },
+    ],
+  }
+  ```
+:::
+
+#### 动态路由参数传递方式
+
+* 传递参数主要有两种方式 : `params`和`query`
+* params的类型:
+  * 配置路由格式 :`/user/:id` (动态路由)
+  * 传递方式: 在path后面的对应的值 :`to ="'/user/'+uid"`
+  * 传递后形成的路径 : `/user/9,/user/zbs`
+  * 接收参数 :`$route.params.id` setup里 可以用  `const route = useRoute()` 然后 `rotue.params.id`
+* query类型
+  * 配置路由格式 `/user`，正常配置
+  * 传递方式 对象中使用query的key作为传递方式 `to={path:'/',query:{id:1,name:'abc'}}`
+  * 接收参数 $route.query.name `rotue.query`
+
+:::details 参数传递配置
+
+:::
+#### [路由守卫](https://next.router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%85%A8%E5%B1%80%E5%89%8D%E7%BD%AE%E5%AE%88%E5%8D%AB)
+
+#### [keep-alive](https://v3.cn.vuejs.org/api/built-in-components.html#keep-alive)
+:::danger 注意
+```html
+<!-- 插槽形式保持不被销毁 -->
+    <router-view v-slot="{ Component }" }>
+      <!-- 组件过度效果 -->
+      <transition> 
+        <keep-alive>
+          <component :is="view"></component>
+        </keep-alive>
+      </transition>
+    </router-view>
+```
 :::
