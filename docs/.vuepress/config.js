@@ -76,6 +76,15 @@ module.exports = {
         ],
       },
       {
+        title: "Docker", // 标题
+        collapsable: true, // 下级列表不可折叠
+        children: [
+          // 下级列表
+          "docker/docker.md",
+          // "front-end-development/vue3/Vuex.md",
+        ],
+      },
+      {
         title: "工具学习", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [

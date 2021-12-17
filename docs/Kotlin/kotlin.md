@@ -1,7 +1,19 @@
 # Kotlin
 
+## 变量
+:::tip 基本概念
+`var 可读可写`<br/>
+`val 只读`<br/>
 
-1. 具名参数
+定义编译时常量 <br/>
+`const val PI = 3.14151`<br/>
+定义在函数之外,编译期间使用<br/>
+
+:::
+
+---
+
+## 具名参数
 
 
 ```kotlin
@@ -168,5 +180,28 @@ class Xiaotoubaba : IWashBowl by Datouerzi {
         Datouerzi.washing();
         println("儿子把碗洗完了")
     }
+}
+```
+ 
+
+## 印章类
+
+```kotlin
+//有限的子类个数
+sealed class 儿子 {
+    fun sayHello() {
+        println("大家好")
+    }
+
+    class 小骡子() : 儿子()
+    class 小驴子() : 儿子()
+}
+
+fun main() {
+
+    var 小驴子:儿子 = 儿子.小驴子();
+    var 小骡子:儿子 = 儿子.小骡子();
+
+    val listOf = listOf<儿子>(小驴子, 小骡子)
 }
 ```
