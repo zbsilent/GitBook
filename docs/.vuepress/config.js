@@ -55,6 +55,7 @@ module.exports = {
           "front-end-development/webpack/01-Core.md",
           "front-end-development/ECMAScript6/es6.md",
           "front-end-development/ECMAScript6/axios.md",
+          "front-end-development/nodejs/nodejs.md",
         ],
       },
       {
