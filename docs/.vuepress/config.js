@@ -91,7 +91,7 @@ module.exports = {
         children: [
           // 下级列表
           "tools-dev/md-script/md.md",
-          "front-end-development/ECMAScript6/es6.md",
+          "tools-dev/mac.md",
         ],
       },
     ],

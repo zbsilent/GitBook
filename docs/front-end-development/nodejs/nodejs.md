@@ -68,3 +68,50 @@ vm 模块使用 模块加载
 - evla 函数可以直接运行代码 `eval(let content = fs.readFileSync('path','utf-8'));`
 - 或者创建函数 `new Function('age','return age+1')`
 - 使用`VM`机制 `vm.runInThisContext(content)`  _Return:hello world_
+
+
+EventEmitter /enents 事件管理/驱动
+- on:事件触发糊掉 
+- emit 触发事件 
+- once 
+- off 移除监听
+
+```js
+cosnt Events = require('events')
+const ev = new Events()
+ev.on('事件'，()=>{})
+ev.emit('事件')
+```
+
+push/sub 订阅/发布
+
+- 缓存队列，存放订阅信息
+- 状态改变通知订阅者执行监听
+
+```js
+class PubSub{
+  constructor(){
+    this._events ={}
+  }
+
+  //注册
+  subscribe(event,classback){
+    if(this._event[event]){
+      //如果当event存在，所以我们只需要往后添加档次监听操作
+      this._events[event].push(callback)
+    }else{
+      //之前没有订阅过此事件
+      this._event[event] =[callback]
+    }
+  }
+  //发布操作
+  publish(event,...args){
+    const items = this._events[event]
+    if(items && items.length){
+      items.forEach(function(callback){
+        callback.call(this,...args)
+      })
+    }
+  }
+}
+```
