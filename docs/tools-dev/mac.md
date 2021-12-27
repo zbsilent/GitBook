@@ -66,3 +66,13 @@ conf/tomcat-users.xml
 
 
 sudo lsof -nP | grep LISTEN | grep 8080
+
+
+### _mac jdk_ 默认安装目录
+- 系统默认
+  - /System/Library/Java/JavaVirtualMachines/
+
+  - /Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk
+- 用户
+  - /Users/zbsilent/Library/Java/JavaVirtualMachines/corretto-1.8.0_312
+- nodejs 安装目录 /usr/local/bin目录下 是根目录

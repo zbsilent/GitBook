@@ -9,7 +9,7 @@ module.exports = {
     // markdown-it-anchor 的选项
     anchor: { permalink: false },
     // markdown-it-toc 的选项
-    toc: { includeLevel: [1, 2,3,4] },
+    toc: { includeLevel: [1, 2, 3, 4] },
     extendMarkdown: (md) => {
       // 使用更多的 markdown-it 插件!
       //md.use(require("markdown-it-anchor"));
@@ -65,6 +65,7 @@ module.exports = {
           // 下级列表
           "front-end-development/vue3/VUE3.md",
           "front-end-development/vue3/Vuex.md",
+          "front-end-development/vue3/Node.md",
         ],
       },
       {
