@@ -95,6 +95,14 @@ module.exports = {
           "tools-dev/mac.md",
         ],
       },
+      {
+        title: "QA", // 标题
+        collapsable: true, // 下级列表不可折叠
+        children: [
+          // 下级列表
+          "java/spring/spring-qa.md",
+        ],
+      },
     ],
 
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL

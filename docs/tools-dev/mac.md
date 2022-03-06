@@ -4,7 +4,7 @@
 
 ### 3
 
-#### MAC查看端口命令
+#### MAC 查看端口命令
 
 ```text
 sudo lsof -nP | grep LISTEN | grep 8080
@@ -22,7 +22,7 @@ sudo chown -R $(whoami) $(brew --prefix)/*
 command+shift+.
 ```
 
-**shell看到隐藏文件**
+**shell 看到隐藏文件**
 
 ```text
 ls -ah
@@ -35,7 +35,7 @@ ps aux | grep fsck
 sudo pkill -f fsck
 ```
 
-**启动MAC的TOMCAT**
+**启动 MAC 的 TOMCAT**
 
 ```js
 # 修改catalina.sh文件
@@ -53,26 +53,26 @@ conf/tomcat-users.xml
 
 ```
 
-### 管理node
+### 管理 node
 
 ```shell
  sudo n 14.14.0
- 
+
  https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md
 ```
 
-
-
-
-
 sudo lsof -nP | grep LISTEN | grep 8080
 
-
 ### _mac jdk_ 默认安装目录
+
 - 系统默认
+
   - /System/Library/Java/JavaVirtualMachines/
 
   - /Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk
+
 - 用户
   - /Users/zbsilent/Library/Java/JavaVirtualMachines/corretto-1.8.0_312
-- nodejs 安装目录 /usr/local/bin目录下 是根目录
+- nodejs 安装目录 /usr/local/bin 目录下 是根目录
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home
