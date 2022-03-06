@@ -2,7 +2,17 @@
 
 
 
+##### 1. 技术选型
 
+![image-20220306111652337](/Users/zbsilent/Library/Application Support/typora-user-images/image-20220306111652337.png)
+
+
+
+##### 2. 版本选型
+
+| Spring Cloud Alibaba Version | Sentinel Version | Nacos Version | RocketMQ Version | Dubbo Version | Seata Version |
+| ---------------------------- | ---------------- | ------------- | ---------------- | ------------- | ------------- |
+| 2021.0.1.0*                  | 1.8.3            | 1.4.2         | 4.9.2            | 2.7.15        | 1.4.2         |
 
 #### 1. sudo npm install n -g
 
@@ -56,3 +66,81 @@ scope=compile的情况（默认scope),也就是说这个项目在编译，测试
 ```xml
 <scope>provided</scope> 排除掉
 ```
+
+
+
+
+
+干掉
+
+`Request:` Did you forget to include spring-cloud-starter-loadbalancer
+
+`solution：` 由于SpringCloud Feign在Hoxton.M2 RELEASED版本之后不再使用Ribbon而是使用spring-cloud-loadbalancer，所以不引入spring-cloud-loadbalancer会报错
+加入spring-cloud-loadbalancer依赖 并且在nacos中排除ribbon依赖，不然loadbalancer无效
+
+```java
+<dependency>
+  <groupId>com.alibaba.cloud</groupId>
+  <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId> springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-loadbalancer</artifactId>
+    <version>2.2.4.RELEASE</version>
+</dependency>
+
+```
+
+
+
+
+
+##### 3.Nacos配置中心使用
+
+```properties
+# DataId By default, the `spring.application.name` configuration is combined with the file extension (the configuration format uses properties by default), and the GROUP is not configured to use DEFAULT_GROUP by default. Therefore, the Nacos Config configuration corresponding to the configuration file has a DataId of nacos-config.properties and a GROUP of DEFAULT_GROUP
+spring.application.name=nacos-config
+spring.cloud.nacos.config.server-addr=127.0.0.1:8848
+```
+
+
+
+必须
+
+```xml
+@RefreshScope
+@Value("${coupon.user.userName:xiudou}")
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-bootstrap</artifactId>
+</dependency>
+```
+
+##### 4.GateWay
+
+```
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: test-route
+          uri: https://www.baidu.com
+          predicates:
+            - Query=url,baidu
+        - id: qq_route
+          uri: https://www.qq.com
+          predicates:
+            - Query=url,qq
+```
+
+请求参数 如果带url 值 是qq的 则前往 qq
+
+##### 三级分类
+

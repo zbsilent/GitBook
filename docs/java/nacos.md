@@ -2,7 +2,7 @@
 
 ## Install
 
-1.启动命令先切换 JDK
+1. 启动命令先切换 JDK
 
 ```sh
 cd OpenSource/nacos/bin
@@ -11,10 +11,11 @@ sh startup.sh -m standalone
 
 ```
 
-2.[访问管理](http://127.0.0.1:8848/nacos/login.html)
+2. [访问管理](http://127.0.0.1:8848/nacos/login.html)
+
 用户 nacos/nacos
 
-3.关闭
+3. 关闭
 
 ```sh
 sh shutdown.sh
