@@ -36,11 +36,19 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "导航", link: "/goto/" },
       { text: "GitHub", link: "https://github.com/zbsilent" },
+      {
+        text: 'NodeJS',
+        ariaLabel: 'NodeJSe',
+        items: [
+          { text: 'NodeJS1', link: 'front-end-development/ECMAScript6/axios.md' },
+          { text: 'NodeJS2', link: 'front-end-development/nodejs/nodejsheima.md' }
+        ]
+      }
       // {
       //   text: 'Languages',
       //   ariaLabel: 'Language Menu',
       //   items: [
-      //     { text: 'Chinese', link: '/language/chinese/' },
+      //     { text: 'Chinese', link: 'front-end-development/ECMAScript6/axios.md' },
       //     { text: 'Japanese', link: '/language/japanese/' }
       //   ]
       // }
