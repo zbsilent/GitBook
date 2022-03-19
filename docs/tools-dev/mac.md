@@ -37,10 +37,12 @@ sudo pkill -f fsck
 
 **启动 MAC 的 TOMCAT**
 
-```js
+```shell
 # 修改catalina.sh文件
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
 export JRE_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
+## mac mini 路径
+export JAVA_HOME=/Users/zbsilent/Library/Java/JavaVirtualMachines/corretto-1.8.0_312/Contents/Home
 # 进入下面目录
 /Users/zbsilent/apache-tomcat-9.0.44/bin
 # 授权
@@ -76,3 +78,31 @@ sudo lsof -nP | grep LISTEN | grep 8080
 - nodejs 安装目录 /usr/local/bin 目录下 是根目录
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home
+
+
+
+### 管理mac安装
+
+> sudo spctl --master-disable 打开所有来源
+
+### Nacos
+
+Install
+
+1.启动命令先切换 JDK
+
+```sh
+cd OpenSource/nacos/bin
+export JAVA_HOME=/Users/zbsilent/Library/Java/JavaVirtualMachines/corretto-1.8.0_312/Contents/Home
+sh startup.sh -m standalone
+
+```
+
+2.[访问管理](http://127.0.0.1:8848/nacos/login.html)
+用户 nacos/nacos
+
+3.关闭
+
+```sh
+sh shutdown.sh
+```

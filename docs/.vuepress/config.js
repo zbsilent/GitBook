@@ -37,21 +37,14 @@ module.exports = {
       { text: "导航", link: "/goto/" },
       { text: "GitHub", link: "https://github.com/zbsilent" },
       {
-        text: 'NodeJS',
-        ariaLabel: 'NodeJSe',
+        text: '前端基础',
+        ariaLabel: 'NodeJs',
         items: [
-          { text: 'NodeJS1', link: 'front-end-development/ECMAScript6/axios.md' },
-          { text: 'NodeJS2', link: 'front-end-development/nodejs/nodejsheima.md' }
+          { text: 'ReactTypeScript', link: '/front-end-development/react/reacts.md' },
+          { text: 'Nodejs笔记', link: '/front-end-development/nodejs/nodejsheima.md' },
+          { text: '嵌套测试', items: [{'text':'测试嵌套',link:'https://baidu.com'}] },
         ]
       }
-      // {
-      //   text: 'Languages',
-      //   ariaLabel: 'Language Menu',
-      //   items: [
-      //     { text: 'Chinese', link: 'front-end-development/ECMAScript6/axios.md' },
-      //     { text: 'Japanese', link: '/language/japanese/' }
-      //   ]
-      // }
     ],
     sidebar: [
       // 左侧导航
@@ -64,6 +57,7 @@ module.exports = {
           "front-end-development/ECMAScript6/es6.md",
           "front-end-development/ECMAScript6/axios.md",
           "front-end-development/nodejs/nodejs.md",
+          "front-end-development/nodejs/nodejsheima.md",
         ],
       },
       {
@@ -133,18 +127,18 @@ module.exports = {
     editLinkText: "帮助我们改善此页面！",
   },
   //多语设置
-  locales: {
-    // 键名是该语言所属的子路径
-    // 作为特例，默认语言可以使用 '/' 作为其路径。
-    "/": {
-      lang: "zh-CN", // 将会被设置为 <html> 的 lang 属性
-      title: "从入门到入坟",
-      description: "Vue-powered Static Site Generator",
-    },
-    "/zh/": {
-      lang: "en-US",
-      title: "developer island",
-      description: "Vue 驱动的静态网站生成器",
-    },
-  },
+  // locales: {
+  //   // 键名是该语言所属的子路径
+  //   // 作为特例，默认语言可以使用 '/' 作为其路径。
+  //   "/": {
+  //     lang: "zh-CN", // 将会被设置为 <html> 的 lang 属性
+  //     title: "从入门到入坟",
+  //     description: "Vue-powered Static Site Generator",
+  //   },
+  //   "/zh/": {
+  //     lang: "en-US",
+  //     title: "developer island",
+  //     description: "Vue 驱动的静态网站生成器",
+  //   },
+  // },
 };

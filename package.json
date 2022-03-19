@@ -2,6 +2,9 @@
   "name": "GitBook",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": ">=14.17.3"
+  },
   "scripts": {
     "doc:dev": "vuepress dev docs",
     "doc:build": "vuepress build docs",
@@ -12,6 +15,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "avn": "^0.2.4",
+    "avn-n": "^0.2.0",
+    "avn-nvm": "^0.2.2",
     "gh-pages": "^3.2.3",
     "vuepress": "^1.8.2"
   },
