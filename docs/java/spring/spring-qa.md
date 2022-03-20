@@ -1,11 +1,12 @@
-[[toc]]
 # SPRING项目整合记忆
+
+[[toc]]
 
 ---
 
 ## 1. 技术选型
 
-![image-20220306111652337](/Users/zbsilent/Library/Application Support/typora-user-images/image-20220306111652337.png)
+![image-20220306111652337](https://raw.githubusercontent.com/zbsilent/imag/main/img/2022/image-20220306111652337.png)
 
 
 

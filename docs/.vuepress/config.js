@@ -119,7 +119,7 @@ module.exports = {
       //   ],
       // },
       {
-        title: "DOCKER记忆", // 标题
+        title: "开发工具整理", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
           // 下级列表
@@ -128,7 +128,7 @@ module.exports = {
         ],
       },
       {
-        title: "工具学习", // 标题
+        title: "其他工具整理", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
           // 下级列表
