@@ -37,23 +37,37 @@ module.exports = {
       { text: "导航", link: "/goto/" },
       { text: "GitHub", link: "https://github.com/zbsilent" },
       {
-        text: '前端基础',
-        ariaLabel: 'NodeJs',
+        text: "前端基础",
+        ariaLabel: "NodeJs",
         items: [
-          { text: 'ReactTypeScript', link: '/front-end-development/react/reacts.md' },
-          { text: 'Nodejs笔记', link: '/front-end-development/nodejs/nodejsheima.md' },
-          { text: '嵌套测试', items: [{'text':'测试嵌套',link:'https://baidu.com'}] },
-        ]
-      }
+          {
+            text: "ReactTypeScript",
+            link: "/front-end-development/react/reacts.md",
+          },
+          {
+            text: "Nodejs笔记",
+            link: "/front-end-development/nodejs/nodejsheima.md",
+          },
+          {
+            text: "嵌套测试",
+            items: [{ text: "测试嵌套", link: "https://baidu.com" }],
+          },
+        ],
+      },
     ],
     sidebar: [
       // 左侧导航
       {
-        title: "前端基础学习", // 标题
+        title: "应用前端整理", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
+          {
+            title: "打包工具", // 标题
+            collapsable: true,
+            children: ["front-end-development/webpack/01-Core.md"],
+          },
           // 下级列表
-          "front-end-development/webpack/01-Core.md",
+
           "front-end-development/ECMAScript6/es6.md",
           "front-end-development/ECMAScript6/axios.md",
           "front-end-development/nodejs/nodejs.md",
