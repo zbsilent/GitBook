@@ -1,10 +1,15 @@
-[[toc]]
+---
+tags:
+  - react
+  - typescript
+  - ts
+---
 
-# React、React Hooks、TypeScript学习
+# REACT&TS基础01
 
 ## 初始化项目
 
-> _npx create-react-app projectName –template typescript_
+`_npx create-react-app projectName –template typescript_`
 
 * 设置绝对路径访问 为./src
 

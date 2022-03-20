@@ -1,8 +1,12 @@
-# React脚手架部分
+# REACT脚手架
 
-[![github](https://raw.githubusercontent.com/zbsilent/imag/main/rootgithubb.svg)![](https://img.shields.io/badge/React-zbsilent-brightgreen)](https://github.com/zbsilent)
+![](https://img.shields.io/badge/React-zbsilent-brightgreen)](https://github.com/zbsilent)
 
 ## 安装脚手架
+
+:::tip 高版本
+npx crate-react-app appName --template typescript
+:::
 
 ```bash
 npm install -g create-react-app

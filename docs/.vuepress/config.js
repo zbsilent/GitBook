@@ -9,7 +9,7 @@ module.exports = {
     // markdown-it-anchor 的选项
     anchor: { permalink: false },
     // markdown-it-toc 的选项
-    toc: { includeLevel: [1, 2, 3, 4] },
+    toc: { includeLevel: [1, 2, 3,4] },
     extendMarkdown: (md) => {
       // 使用更多的 markdown-it 插件!
       //md.use(require("markdown-it-anchor"));
@@ -37,20 +37,24 @@ module.exports = {
       { text: "导航", link: "/goto/" },
       { text: "GitHub", link: "https://github.com/zbsilent" },
       {
-        text: "前端基础",
-        ariaLabel: "NodeJs",
+        text: "前端基础🍃",
+        ariaLabel: "API",
         items: [
           {
-            text: "ReactTypeScript",
-            link: "/front-end-development/react/reacts.md",
+            text: "前端TS与REACT",
+            link: "/front-end-development/react/reactypescript.md",
           },
           {
-            text: "Nodejs笔记",
+            text: "NODEJS笔记",
             link: "/front-end-development/nodejs/nodejsheima.md",
           },
           {
-            text: "嵌套测试",
-            items: [{ text: "测试嵌套", link: "https://baidu.com" }],
+            text: "其他记录",
+            items: [
+              { text: "跳转百度", link: "https://baidu.com" },
+              { text: "笔记本1", link: "https://zbsilent.github.io" },
+              { text: "笔记本2", link: "https://zbsilent.github.io" },
+            ],
           },
         ],
       },
@@ -58,7 +62,7 @@ module.exports = {
     sidebar: [
       // 左侧导航
       {
-        title: "应用前端整理", // 标题
+        title: "前端应用整理", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
           {
@@ -66,35 +70,56 @@ module.exports = {
             collapsable: true,
             children: ["front-end-development/webpack/01-Core.md"],
           },
+          {
+            title: "NODEJS与ES6", // 标题
+            collapsable: true,
+            children: [
+              "front-end-development/ECMAScript6/es6.md",
+              "front-end-development/nodejs/nodejs.md",
+              "front-end-development/nodejs/nodejsheima.md",
+            ],
+          },
           // 下级列表
-
-          "front-end-development/ECMAScript6/es6.md",
           "front-end-development/ECMAScript6/axios.md",
-          "front-end-development/nodejs/nodejs.md",
-          "front-end-development/nodejs/nodejsheima.md",
         ],
       },
       {
-        title: "Vue3.x", // 标题
+        title: "前端框架整理", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
-          // 下级列表
-          "front-end-development/vue3/VUE3.md",
-          "front-end-development/vue3/Vuex.md",
-          "front-end-development/vue3/Node.md",
+          {
+            title: "vue基础", // 标题
+            collapsable: true,
+            children: [
+              "front-end-development/vue3/VUE3.md",
+              "front-end-development/vue3/Vuex.md",
+            ],
+          },
+          {
+            title: "react基础", // 标题
+            collapsable: true,
+            children: [
+              "front-end-development/react/reactypescript.md",
+              "front-end-development/react/react.md",
+              "front-end-development/react/react01.md",
+              "front-end-development/react/react02.md",
+              "front-end-development/react/redux.md",
+              "front-end-development/react/router.md",
+            ],
+          },
         ],
       },
+      // {
+      //   title: "Kotlin", // 标题
+      //   collapsable: true, // 下级列表不可折叠
+      //   children: [
+      //     // 下级列表
+      //     "Kotlin/kotlin.md",
+      //     // "front-end-development/vue3/Vuex.md",
+      //   ],
+      // },
       {
-        title: "Kotlin", // 标题
-        collapsable: true, // 下级列表不可折叠
-        children: [
-          // 下级列表
-          "Kotlin/kotlin.md",
-          // "front-end-development/vue3/Vuex.md",
-        ],
-      },
-      {
-        title: "Docker", // 标题
+        title: "DOCKER记忆", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
           // 下级列表
@@ -112,11 +137,29 @@ module.exports = {
         ],
       },
       {
-        title: "QA", // 标题
+        title: "后端应用整理", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
+          {
+            title: "基础篇章", // 标题
+            collapsable: true, // 下级列表不可折叠
+            children: [
+              // 下级列表
+              "java/jdk8.md",
+            ],
+          },
+          {
+            title: "框架篇章", // 标题
+            collapsable: true, // 下级列表不可折叠
+            children: [
+              // 下级列表
+              "java/spring/spring-qa.md",
+              "java/spring/springboot.md",
+              "java/spring/springboot2.md",
+              "java/spring/springcloud.md",
+            ],
+          },
           // 下级列表
-          "java/spring/spring-qa.md",
         ],
       },
     ],

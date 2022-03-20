@@ -1,4 +1,4 @@
-# Node.js
+# NODEJS基础
 
 在node中有一个全局变量global，他的作用和网页中window类似
 在全局只能够创建的变量会作为global的属性保存

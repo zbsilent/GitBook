@@ -1,4 +1,4 @@
-# Redux
+# REDUX记忆
 
 ## 作用
 

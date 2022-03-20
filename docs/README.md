@@ -9,10 +9,10 @@ actionLink: /front-end-development/
 features:
 - title: 学习
   details: 好好学习，早日入坟
-- title: 修缮修缮再修禅
-  details: 修缮修缮再修禅。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 修缮 
+  details: 修缮、修缮、再修缮。
+- title: never
+  details: Until you make peace with who you are, you’ll never be content with what you have.
 
 
 tags:

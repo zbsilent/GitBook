@@ -1,4 +1,4 @@
-# [Vuex](https://next.vuex.vuejs.org/zh/) 
+# [VUEX基础](https://next.vuex.vuejs.org/zh/) 
 
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/zbsilent/GitBook?color=brightgreen&logoColor=brightgreen)
 ![node-current](https://img.shields.io/node/v/webpack)

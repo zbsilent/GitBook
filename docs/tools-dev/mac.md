@@ -1,10 +1,8 @@
-# Mac
+# MAC常用命令
 
-## 2
+ 
 
-### 3
-
-#### MAC 查看端口命令
+### MAC 查看端口命令
 
 ```text
 sudo lsof -nP | grep LISTEN | grep 8080
@@ -106,3 +104,13 @@ sh startup.sh -m standalone
 ```sh
 sh shutdown.sh
 ```
+
+
+
+### NPM 安装路径
+
+npm list --depth=0 --global
+
+## 查看 brew 路径
+
+brew list
