@@ -18,6 +18,8 @@ git init
 git add -A
 git commit -m 'deploy'
 
+git remote add origin https://github.com/zbsilent/zbsilent.github.io.git
+#git push -f https://github.com/zbsilent/zbsilent.github.io.git master
+git pull origin master
 
-git push -f https://github.com/zbsilent/zbsilent.github.io.git master
 cd -    
