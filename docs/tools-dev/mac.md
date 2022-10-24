@@ -114,3 +114,14 @@ npm list --depth=0 --global
 ## 查看 brew 路径
 
 brew list
+
+
+## 安装o-my-zsh
+
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+open ~/.zshrc
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+```

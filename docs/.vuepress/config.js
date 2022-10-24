@@ -122,6 +122,7 @@ module.exports = {
         title: "开发工具整理", // 标题
         collapsable: true, // 下级列表不可折叠
         children: [
+          "java/spring/APCP.md",
           // 下级列表
           "docker/docker.md",
           // "front-end-development/vue3/Vuex.md",
@@ -134,6 +135,7 @@ module.exports = {
           // 下级列表
           "tools-dev/md-script/md.md",
           "tools-dev/mac.md",
+          "works/idea.md"
         ],
       },
       {

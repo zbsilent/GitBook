@@ -20,4 +20,4 @@ git commit -m 'deploy'
 
 
 git push -f https://github.com/zbsilent/zbsilent.github.io.git master
-cd -
+cd -    

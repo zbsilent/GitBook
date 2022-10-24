@@ -54,7 +54,7 @@ tags:
 > npm install --save-dev husky lint-staged
 > npx husky install
 > npm set-script prepare "husky install"
-> npx husky add .husky/pre-commit "npx lint-staged”
+> npx husky add .husky/pre-commit "npx lint-staged"
 >
 > Add {  "lint-staged": {    "**/*": "prettier --write --ignore-unknown"  } } to package.json
 >
@@ -400,7 +400,7 @@ render(
 ```jsx
 import styled from '@emotion/styled'
 
-const Button = styled.button`
+const Button = styled.button` /*这里可以使用style(组件的高端东西)*/
   padding: 32px;
   background-color: hotpink;
   font-size: 24px;
@@ -416,4 +416,23 @@ render(<Button>This my button component.</Button>)
 ```
 
 :::
+
+
+
+### CSS
+
+> em px的相对元素 相对于父元素的font-size
+>
+> rem 相对于html的font-size，r就是root的意思 1rm === 10px
+
+```css
+html {
+  font-size:62.5%
+}
+html body #root .App {
+  min-height: 100vh //100视口高度
+}
+```
+
+
 

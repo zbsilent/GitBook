@@ -3,7 +3,9 @@
 
 
 
+## docker命令
 
+> [复制文件]()docker cp /Users/zbsilent/Developer/TestSSH d255a2c8c987:home
 
 ## mysql安装
 
