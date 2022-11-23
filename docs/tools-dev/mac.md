@@ -8,6 +8,12 @@
 sudo lsof -nP | grep LISTEN | grep 8080
 ```
 
+**刷新DNS**
+
+```sql
+sudo killall -HUP mDNSResponder
+```
+
 **管理员权限**
 
 ```text
@@ -37,10 +43,11 @@ sudo pkill -f fsck
 
 ```shell
 # 修改catalina.sh文件
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_351.jdk/Contents/Home
 export JRE_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
 ## mac mini 路径
 export JAVA_HOME=/Users/zbsilent/Library/Java/JavaVirtualMachines/corretto-1.8.0_312/Contents/Home
+export JAVA_HOME=/Users/zbsilent/Library/Java/JavaVirtualMachines/corretto-1.8.0_342/Contents/Home
 # 进入下面目录
 /Users/zbsilent/apache-tomcat-9.0.44/bin
 # 授权

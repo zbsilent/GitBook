@@ -83,7 +83,9 @@ react.js - 核心js
 
 react-dom.js - 虚拟dom
 
-babel ？ jsx
+babel ？ jsx 
+
+> babel的作用 ES6->ES5 JSX转JS
 
 bower - js所有的框架库包管理器
 
@@ -103,7 +105,7 @@ npm install -g create-react-app
 create-react-app react_test
 ```
 
-采用引用的方式
+采用引用的方式 react.development.js react核心库
 
 ```text
 <html>
