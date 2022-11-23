@@ -135,8 +135,7 @@ module.exports = {
           // 下级列表
           "tools-dev/md-script/md.md",
           "tools-dev/mac.md",
-          "works/idea.md",
-          "works/test.md"
+          "works/idea.md"
         ],
       },
       {
