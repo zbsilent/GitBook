@@ -132,3 +132,18 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 open ~/.zshrc
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 ```
+
+
+
+## 安装GITLAB注意事项
+
+```shell
+gitlab-ctl reconfigure
+
+```
+
+
+
+### UBUNTU
+
+> zbsilent zbs281992

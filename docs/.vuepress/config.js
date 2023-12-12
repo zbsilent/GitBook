@@ -105,6 +105,7 @@ module.exports = {
               "front-end-development/react/react02.md",
               "front-end-development/react/redux.md",
               "front-end-development/react/router.md",
+              "front-end-development/react/react二刷.md",
             ],
           },
         ],
@@ -136,7 +137,8 @@ module.exports = {
           "tools-dev/md-script/md.md",
           "tools-dev/mac.md",
           "works/idea.md",
-          "works/update.md"
+          "works/update.md",
+          "works/gitlab.md",
         ],
       },
       {
