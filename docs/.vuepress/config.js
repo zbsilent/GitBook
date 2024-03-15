@@ -139,6 +139,8 @@ module.exports = {
           "works/idea.md",
           "works/update.md",
           "works/gitlab.md",
+          "works/IDEA不完全使用指北.md",
+          "works/NCC异常问题记录.md",
         ],
       },
       {

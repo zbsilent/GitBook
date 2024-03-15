@@ -175,3 +175,25 @@ RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
 CMD ["/usr/sbin/sshd", "-D"]
 
 ```
+
+
+
+# MACBOOK PRO13 INSIDE
+
+#### [DOCKER]()
+
+[1. 镜像设置地址](https://www.cnblogs.com/evan-liang/p/12233904.html)
+
+[2. 安装注意事项-基于本机docker]()
+
+> docker run --name oracle -d -p 8080:8080 -p 1521:1521 -v /Users/zbsilent/OpenSources/oracle/data:/u01/app/oracle abhyuni/oracle-11g-r2
+
+
+
+> docker run -h oracle --name oracle -d -p 49160:22 -p 49161:1521 -p 49162:8080 deepdiver/docker-oracle-xe-11g
+
+
+
+docker run -p 1521:1521 --name oracle_11g -d --restart=always registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g
+
+--platform linux/amd64

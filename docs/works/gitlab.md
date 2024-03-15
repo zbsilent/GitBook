@@ -78,9 +78,9 @@
 
 10. 进入查看gitlab.yml
 
-   > cd /opt/gitlab/embedded/service/gitlab-rails/config
-   >
-   > vi gitlab.yml  这里需要设置下载地址
+    > cd /opt/gitlab/embedded/service/gitlab-rails/config
+    >
+    > vi gitlab.yml  这里需要设置下载地址
 
 11. 重启
 

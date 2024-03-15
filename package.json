@@ -9,6 +9,7 @@
     "doc:dev": "vuepress dev docs",
     "doc:build": "vuepress build docs",
     "deploy-gh": "GH=1 yarn doc:build && bash deploy-gh.sh",
+    "deploy-pro3": "GH=1 yarn doc:build && bash deploy-pro3.sh",
     "deploy": "bash deploysh.sh"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
   "dependencies": {
     "markdown-it": "^12.3.0",
     "markdown-it-anchor": "^8.4.1",
-    "markdown-it-toc": "^1.1.0"
+    "markdown-it-toc": "^1.1.0",
+    "yarn": "^1.22.22"
   }
 }
