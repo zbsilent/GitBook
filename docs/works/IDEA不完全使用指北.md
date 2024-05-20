@@ -1,4 +1,3 @@
-[toc]
 # 使用idea插件开发常见问题解答
 
 ### 本文所指的idea插件是：[https://nccdev.yonyou.com/article/detail/630](javascript:void(0))

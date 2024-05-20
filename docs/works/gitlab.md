@@ -1,3 +1,5 @@
+# Gitlab安装
+
 1. 更新并安装依赖
 
    > sudo yum -y -update 
